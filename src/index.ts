@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 import index = require("./routes/index")
 const plugins = require("./routes/plugin");
 import {Harvi} from "./harvi/Harvi";
+import {CorePlugins} from "./harvi/core-plugins/CorePlugins";
 
 var app = express();
 
@@ -59,3 +60,8 @@ server.onStart();
 
 
 server.initAvi();
+
+let test = new CorePlugins();
+
+test.init();
+test.run("Quelle heure il est");

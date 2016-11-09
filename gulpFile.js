@@ -95,7 +95,7 @@ gulp.task("compile-ts", ['clean'], function () {
 
     gulp.src(["./src/plugins/**/"]).pipe(gulp.dest('dist/plugins'));
     gulp.src(["./src/*.json",
-        "./src/**",
+        // "./src/**",
         // "./src/*.sh",
         // "./src/*.txt",
         "./src/*.js"]).pipe(gulp.dest('dist'));

@@ -39,6 +39,8 @@
     "jszip": "^2.4.0",
     "linq-es6": "^0.2.1",
     "merge2": "^1.0.0",
+    "node-uuid": "^1.4.7",
+    "node-wit": "^4.1.0",
     "sinon": "^1.17.0",
     "tslint": "^3.13.0",
     "typescript": "^1.8.0",

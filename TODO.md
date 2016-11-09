@@ -8,3 +8,9 @@
 - Utiliser socket io pour envoyé les infos en direct
 - Convert routes/plugins to TS
 - Use await on all method 
+
+
+
+## Sensors
+
+- Air quality 

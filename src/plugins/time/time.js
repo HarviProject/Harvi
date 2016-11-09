@@ -9,5 +9,4 @@ exports.action = function (data, callback, config) {
         type: "tts",
         content: "Il est " + date.getHours() + " heures " + date.getMinutes()
     })
-
 };
