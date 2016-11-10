@@ -13,7 +13,7 @@ WORKDIR /app
 RUN yarn
 
 
-LABEL avi.version=1.0.139
+LABEL avi.version=1.0.148
 
 COPY tsconfig.json package.json gulpFile.js yarn.lock /app/
 COPY src /app/src

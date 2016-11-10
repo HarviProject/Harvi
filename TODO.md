@@ -1,16 +1,19 @@
 # TODO LIST HARVI
 
 - Add core plugin (weather, time)
-- Init front project
-- Réfléchir à comment intégrer les plugins
 - Implémenter le bot facebook pour plugins
-- Add mongodb
+- Use await on all method
+- Add database (mongo)
+- Init front project
 - Utiliser socket io pour envoyé les infos en direct
-- Convert routes/plugins to TS
-- Use await on all method 
+- Add sonus
+ 
 
 
 
 ## Sensors
 
 - Air quality 
+- Temperature
+- Motion
+-

@@ -3,11 +3,14 @@ import {HarviHttpResponseModel} from "../HarviHttpResponseModel";
 import {ICorePlugin} from "./ICorePlugin";
 import {HarviWitResponse, EntitiesWit} from "../../vendor-tds/Wit";
 
+
+const fs = require("fs");
+const path = require('path');
 const Wit = require('node-wit').Wit;
 const uuid = require('node-uuid');
 
 const accessToken = (() => {
-    return "API_KEI";
+    return "AFIZMTEQMMSVFXDILQ35MG6OMPO36BQE";
 })();
 
 
@@ -31,39 +34,35 @@ export class CorePlugins {
     }
 
     init() {
-        //TODO Here read all folder on core-plugins
-        //console.log(__dirname);
-        let req = require('./turn-light/index');
-        let light: ICorePlugin = new req.Index();
+        fs.readdir(__dirname, (err, files) => {
+            if (err) {
+                Harvi.logger.error("Erreur dans le chargement des plugins : " + err);
+            } else {
 
-        this.mActions[light.actionName] = ({context, entities}) => {
-            return new Promise(function (resolve, reject) {
-                try {
-                    light.action({context, entities}, null).then((harviWitResponse: HarviWitResponse) => {
-                        resolve(harviWitResponse.harvi);
-                    });
-                } catch (e) {
-                    Harvi.logger.error(e);
-                    reject(e);
-                }
-            });
-        };
-
-        let reqTime = require('./time/index');
-        let time: ICorePlugin = new reqTime.Index();
-
-        this.mActions[time.actionName] = ({context, entities}) => {
-            return new Promise(function (resolve, reject) {
-                try {
-                    time.action({context, entities}, null).then((harviWitResponse: HarviWitResponse) => {
-                        resolve(harviWitResponse.harvi);
-                    });
-                } catch (e) {
-                    Harvi.logger.error(e);
-                    reject(e);
-                }
-            });
-        };
+                files.forEach((file) => {
+                    file = path.resolve(__dirname, file);
+                    if (fs.lstatSync(file).isDirectory()) {
+                        let req = require(file);
+                        let currentCorePlugin: ICorePlugin = new req.Index();
+                        this.mActions[currentCorePlugin.actionName] = ({context, entities}) => {
+                            return new Promise(function (resolve, reject) {
+                                try {
+                                    currentCorePlugin.action({
+                                        context,
+                                        entities
+                                    }, null).then((harviWitResponse: HarviWitResponse) => {
+                                        resolve(harviWitResponse.harvi);
+                                    });
+                                } catch (e) {
+                                    Harvi.logger.error(e);
+                                    reject(e);
+                                }
+                            });
+                        };
+                    }
+                });
+            }
+        });
 
         let actions = this.mActions;
         this.clientWit = new Wit({accessToken, actions});
