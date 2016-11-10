@@ -60,8 +60,8 @@ server.onStart();
 
 
 server.initAvi();
-
-let test = new CorePlugins();
-
-test.init();
-test.run("Quelle heure il est");
+//
+// let test = new CorePlugins();
+//
+// test.init();
+// test.run("Quelle heure il est");

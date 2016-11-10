@@ -17,7 +17,6 @@ export class Index extends CorePlugins implements ICorePlugin {
                 value: "Il est " + date.getHours() + " heures " + date.getMinutes()
             };
 
-
             resolve({
                 wit: wit,
                 harvi: response
