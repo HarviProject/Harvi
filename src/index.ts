@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 import index = require("./routes/index")
 const plugins = require("./routes/plugin");
 import {Harvi} from "./harvi/Harvi";
-import {CorePlugins} from "./harvi/core-plugins/CorePlugins";
+import {ProviderFactory} from "./harvi/providers/ProviderFactory";
+import {UserModel} from "./harvi/models/UserModel";
+import {HarviDataInitializer} from "./harvi/HarviDataInitializer";
 
 var app = express();
 
@@ -15,6 +17,7 @@ var app = express();
 class HttpServer {
     NodePort: number;
     harvi: Harvi;
+    private harviDateInit = new HarviDataInitializer();
 
     constructor(port: number) {
         this.NodePort = port;
@@ -23,7 +26,7 @@ class HttpServer {
     }
 
     private configure(): void {
-        app.use(express.static(path.join('../','public')));
+        app.use(express.static(path.join('../', 'public')));
         //app.set('views', __dirname + '/views');
         //app.set('view engine', 'jade');
         app.use(bodyParser.urlencoded({'extended': 'true'}));            // parse application/x-www-form-urlencoded
@@ -40,28 +43,43 @@ class HttpServer {
 
     }
 
-    onStart() {
-        app.listen(this.NodePort, (err) => {
-            if (err) {
-                Harvi.logger.error(err);
-            } else {
-                Harvi.logger.info("Listening on port " + this.NodePort);
-            }
+    onStartAsync() {
+        new Promise((resolve, reject) => {
+            ProviderFactory.connect("mongodb://localhost/harvi");
+
+            app.listen(this.NodePort, (err) => {
+                if (err) {
+                    Harvi.logger.error(err);
+                    reject(err);
+                } else {
+                    Harvi.logger.info("Listening on port " + this.NodePort);
+                    resolve();
+                }
+            });
         });
+
     }
 
-    initAvi() {
+    async initHarvi() {
+        Harvi.logger.info("Init Default user");
+        await this.harviDateInit.initUserAdminAsync();
+
+        Harvi.logger.info("Start harvi");
         this.harvi.init();
     }
 }
 
-var server = new HttpServer(8888);
-server.onStart();
 
+class Startup {
 
-server.initAvi();
-//
-// let test = new CorePlugins();
-//
-// test.init();
-// test.run("Quelle heure il est");
+    async start() {
+        let server = new HttpServer(8888);
+        await server.onStartAsync();
+
+        server.initHarvi();
+
+    }
+}
+
+let startup = new Startup();
+startup.start();
