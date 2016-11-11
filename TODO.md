@@ -9,6 +9,7 @@
 - Add core plugin (weather, time)
 - Add sonus
 - Optimise DockerFile
+
  
 ## Features
 
