@@ -30,12 +30,12 @@ export abstract class Provider<T> implements IProvider<T> {
         });
     }
 
-    async findOneAsync(query: any): Promise<T> {
-        let founds = await this.findOneAsync(query);
+    async findOneAsync(id: string): Promise<T> {
+        let founds = await this.findAsync({ id: id });
         if (founds[0]) {
             return founds[0];
         } else {
-            return founds;
+            return null;
         }
     }
 
