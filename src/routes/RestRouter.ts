@@ -1,22 +1,25 @@
 import * as express from "express";
-import { Provider } from '../harvi/providers/Provider';
+import {Provider} from '../harvi/providers/Provider';
 
 
 export class RestRouter<T> {
 
 
-    constructor(private model: Provider<T>) {
+    private static model;
 
+    constructor(model: Provider<T>) {
+        RestRouter.model = model;
     }
 
     private async get(req: express.Request, res: express.Response, next: express.NextFunction) {
+
         try {
             let id = req.params.id;
             if (id) {
-                let model = await this.model.findOneAsync(id);
+                let model = await RestRouter.model.findOneAsync(id);
                 res.json(model);
             } else {
-                let model = await this.model.findAsync({});
+                let model = await RestRouter.model.findAsync({});
                 res.json(model);
             }
         } catch (e) {
@@ -28,9 +31,9 @@ export class RestRouter<T> {
     private async update(req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
             let id = req.params.id;
-            let data = req.body.data;
+            let data = req.body;
             if (id && data) {
-                let model = await this.model.updateAsync(id, data);
+                let model = await RestRouter.model.updateAsync(id, data);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -45,9 +48,9 @@ export class RestRouter<T> {
 
     private async create(req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
-            let data = req.body.data;
+            let data = req.body;
             if (data) {
-                let model = await this.model.createAsync(data);
+                let model = await RestRouter.model.createAsync(data);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -64,7 +67,7 @@ export class RestRouter<T> {
         try {
             let id = req.params.id;
             if (id) {
-                let model = await this.model.deleteAsync(id);
+                let model = await RestRouter.model.deleteAsync(id);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -76,13 +79,16 @@ export class RestRouter<T> {
         }
     }
 
-    getRoutes() {
+    getRoutes(): express.Router {
         let router: express.Router = express.Router();
 
+        router.get('/', this.get);
         router.get('/:id', this.get);
         router.put('/:id', this.update);
         router.post('/', this.create);
         router.delete('/:id', this.delete);
+
+        return router;
     }
 
 }

@@ -8,8 +8,8 @@ import index = require("./routes/index")
 const plugins = require("./routes/plugin");
 import {Harvi} from "./harvi/Harvi";
 import {ProviderFactory} from "./harvi/providers/ProviderFactory";
-import {UserModel} from "./harvi/models/UserModel";
 import {HarviDataInitializer} from "./harvi/HarviDataInitializer";
+import {Room} from "./routes/room";
 
 var app = express();
 
@@ -32,6 +32,9 @@ class HttpServer {
         app.use(bodyParser.urlencoded({'extended': 'true'}));            // parse application/x-www-form-urlencoded
         app.use(bodyParser.json());
         app.get('/', index.index);
+
+        let room = new Room();
+        app.use('/room', room.getRoutes());
         //app.use('/history', new History());
         app.use('/plugin', plugins);
         app.get('/voice-listener', (req, res) => {

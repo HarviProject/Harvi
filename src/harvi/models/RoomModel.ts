@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-interface RoomSchema {
+export interface RoomSchema {
     name: string;
     stair: number;
 }
