@@ -1,5 +1,5 @@
-import { IProvider } from "../providers/IProvider";
-import { Harvi } from "../Harvi";
+import {IProvider} from "../providers/IProvider";
+import {Harvi} from "../Harvi";
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -31,7 +31,7 @@ export abstract class Provider<T> implements IProvider<T> {
     }
 
     async findOneAsync(id: string): Promise<T> {
-        let founds = await this.findAsync({ _id: id });
+        let founds = await this.findAsync({_id: id});
         if (founds[0]) {
             return founds[0];
         } else {
@@ -41,9 +41,10 @@ export abstract class Provider<T> implements IProvider<T> {
 
 
     async findOrCreateAsync(query: any): Promise<T> {
-        let found = await this.findOneAsync(query);
-        if (found) {
-            return found;
+        let found: Array<T> = await this.findAsync(query);
+        if (found.length > 0) {
+            //Should be never > 1
+            return found[0];
         } else {
             return await this.createAsync(query);
         }
@@ -64,7 +65,7 @@ export abstract class Provider<T> implements IProvider<T> {
 
     updateAsync(id: string, data: T): Promise<T> {
         return new Promise((resolve, reject) => {
-            this.modelProvider.update({ _id: id }, data, (err, updated: T) => {
+            this.modelProvider.update({_id: id}, data, (err, updated: T) => {
                 if (err) {
                     Harvi.logger.error(err);
                     reject(err);
@@ -77,7 +78,7 @@ export abstract class Provider<T> implements IProvider<T> {
 
     deleteAsync(id: string): Promise<T> {
         return new Promise((resolve, reject) => {
-            this.modelProvider.remove({ _id: id }, (err, created: T) => {
+            this.modelProvider.remove({_id: id}, (err, created: T) => {
                 if (err) {
                     Harvi.logger.error(err);
                     reject(err);

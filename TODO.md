@@ -1,6 +1,5 @@
 # TODO LIST HARVI
 
-- Add database (mongo)
 - https://www.npmjs.com/package/johnny-five
 - Use await on all method
 - Add front end
