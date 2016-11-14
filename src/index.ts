@@ -9,7 +9,8 @@ const plugins = require("./routes/plugin");
 import {Harvi} from "./harvi/Harvi";
 import {ProviderFactory} from "./harvi/providers/ProviderFactory";
 import {HarviDataInitializer} from "./harvi/HarviDataInitializer";
-import {Room} from "./routes/room";
+import {Room} from "./routes/Room";
+import {House} from "./routes/House";
 
 var app = express();
 
@@ -34,6 +35,10 @@ class HttpServer {
         app.get('/', index.index);
 
         let room = new Room();
+
+        let house = new House();
+
+        app.use('/house', house.getRoutes());
         app.use('/room', room.getRoutes());
         //app.use('/history', new History());
         app.use('/plugin', plugins);
