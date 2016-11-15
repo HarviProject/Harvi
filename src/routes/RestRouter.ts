@@ -5,10 +5,10 @@ import {Provider} from '../harvi/providers/Provider';
 export class RestRouter<T> {
 
 
-    private static model;
+    private model;
 
     constructor(model: Provider<T>) {
-        RestRouter.model = model;
+        this.model = model;
     }
 
     private async get(req: express.Request, res: express.Response, next: express.NextFunction) {
@@ -16,10 +16,10 @@ export class RestRouter<T> {
         try {
             let id = req.params.id;
             if (id) {
-                let model = await RestRouter.model.findOneAsync(id);
+                let model = await this.model.findOneAsync(id);
                 res.json(model);
             } else {
-                let model = await RestRouter.model.findAsync({});
+                let model = await this.model.findAsync({});
                 res.json(model);
             }
         } catch (e) {
@@ -33,7 +33,7 @@ export class RestRouter<T> {
             let id = req.params.id;
             let data = req.body;
             if (id && data) {
-                let model = await RestRouter.model.updateAsync(id, data);
+                let model = await this.model.updateAsync(id, data);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -50,7 +50,7 @@ export class RestRouter<T> {
         try {
             let data = req.body;
             if (data) {
-                let model = await RestRouter.model.createAsync(data);
+                let model = await this.model.createAsync(data);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -67,7 +67,7 @@ export class RestRouter<T> {
         try {
             let id = req.params.id;
             if (id) {
-                let model = await RestRouter.model.deleteAsync(id);
+                let model = await this.model.deleteAsync(id);
                 res.json(model);
             } else {
                 res.status(400).json({
@@ -82,11 +82,21 @@ export class RestRouter<T> {
     getRoutes(): express.Router {
         let router: express.Router = express.Router();
 
-        router.get('/', this.get);
-        router.get('/:id', this.get);
-        router.put('/:id', this.update);
-        router.post('/', this.create);
-        router.delete('/:id', this.delete);
+        router.get('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+            this.get(req, res, next);
+        });
+        router.get('/:id', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+            this.get(req, res, next);
+        });
+        router.put('/:id', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+            this.update(req, res, next);
+        });
+        router.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+            this.create(req, res, next);
+        });
+        router.delete('/:id', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+            this.delete(req, res, next);
+        });
 
         return router;
     }

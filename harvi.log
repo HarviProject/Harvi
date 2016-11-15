@@ -1,38 +1,25 @@
-2016-11-11T09:29:49.832Z - [32minfo[39m: Listening on port 8888
-2016-11-11T09:29:49.835Z - [32minfo[39m: Init Default user
-2016-11-11T11:03:50.960Z - [32minfo[39m: Listening on port 8888
-2016-11-11T11:03:50.963Z - [32minfo[39m: Init Default user
-2016-11-11T11:06:10.153Z - [32minfo[39m: Listening on port 8888
-2016-11-11T11:06:10.158Z - [32minfo[39m: Init Default user
-2016-11-11T11:07:42.279Z - [32minfo[39m: Listening on port 8888
-2016-11-11T11:07:42.284Z - [32minfo[39m: Init Default user
-2016-11-11T11:09:07.231Z - [32minfo[39m: Listening on port 8888
-2016-11-11T11:09:07.234Z - [32minfo[39m: Init Default user
-2016-11-11T11:11:14.650Z - [32minfo[39m: Listening on port 8888
-2016-11-11T11:11:14.653Z - [32minfo[39m: Init Default user
-2016-11-12T08:22:40.176Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:23:20.683Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:23:20.686Z - [32minfo[39m: Init Default user
-2016-11-12T08:24:42.985Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:24:42.988Z - [32minfo[39m: Init Default user
-2016-11-12T08:28:50.050Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:28:50.053Z - [32minfo[39m: Init Default user
-2016-11-12T08:28:50.143Z - [32minfo[39m: Start harvi
-2016-11-12T08:28:50.202Z - [34mdebug[39m: Config loaded undefined
-2016-11-12T08:28:50.208Z - [34mdebug[39m: 
-2016-11-12T08:31:24.671Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:31:24.674Z - [32minfo[39m: Init Default user
-2016-11-12T08:32:47.508Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:32:47.510Z - [32minfo[39m: Init Default user
-2016-11-12T08:33:38.734Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:33:38.738Z - [32minfo[39m: Init Default user
-2016-11-12T08:37:32.587Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:37:32.590Z - [32minfo[39m: Init Default user
-2016-11-12T08:37:33.172Z - [32minfo[39m: Start harvi
-2016-11-12T08:37:33.175Z - [34mdebug[39m: Config loaded undefined
-2016-11-12T08:37:33.176Z - [34mdebug[39m: 
-2016-11-12T08:37:55.058Z - [32minfo[39m: Listening on port 8888
-2016-11-12T08:37:55.062Z - [32minfo[39m: Init Default user
-2016-11-12T08:37:55.181Z - [32minfo[39m: Start harvi
-2016-11-12T08:37:55.183Z - [34mdebug[39m: Config loaded undefined
-2016-11-12T08:37:55.184Z - [34mdebug[39m: 
+2016-11-15T12:53:25.310Z - [32minfo[39m: Listening on port 8888
+2016-11-15T12:53:25.325Z - [32minfo[39m: Init Default user
+2016-11-15T12:53:25.480Z - [32minfo[39m: Start harvi
+2016-11-15T12:53:25.482Z - [34mdebug[39m: Config loaded undefined
+2016-11-15T12:53:25.484Z - [34mdebug[39m: 
+2016-11-15T12:55:00.815Z - [32minfo[39m: Listening on port 8888
+2016-11-15T12:55:00.820Z - [32minfo[39m: Init Default user
+2016-11-15T12:55:01.137Z - [32minfo[39m: Start harvi
+2016-11-15T12:55:01.140Z - [34mdebug[39m: Config loaded undefined
+2016-11-15T12:55:01.141Z - [34mdebug[39m: 
+2016-11-15T12:58:17.132Z - [32minfo[39m: Listening on port 8888
+2016-11-15T12:58:17.139Z - [32minfo[39m: Init Default user
+2016-11-15T12:58:17.961Z - [32minfo[39m: Start harvi
+2016-11-15T12:58:17.968Z - [34mdebug[39m: Config loaded undefined
+2016-11-15T12:58:17.993Z - [34mdebug[39m: 
+2016-11-15T13:37:08.525Z - [32minfo[39m: Listening on port 8888
+2016-11-15T13:37:08.542Z - [32minfo[39m: Init Default user
+2016-11-15T13:37:08.669Z - [32minfo[39m: Start harvi
+2016-11-15T13:37:08.672Z - [34mdebug[39m: Config loaded undefined
+2016-11-15T13:37:08.673Z - [34mdebug[39m: 
+2016-11-15T13:44:22.132Z - [32minfo[39m: Listening on port 8888
+2016-11-15T13:44:22.136Z - [32minfo[39m: Init Default user
+2016-11-15T13:44:22.302Z - [32minfo[39m: Start harvi
+2016-11-15T13:44:22.493Z - [34mdebug[39m: Config loaded undefined
+2016-11-15T13:44:22.510Z - [34mdebug[39m: 

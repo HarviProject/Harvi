@@ -12,9 +12,11 @@
  
 ## Features
 
+- Mqtt
 - Google calendar
 - Weather 
 - Iftt
+
 
 
 ## Sensors & Components

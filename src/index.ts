@@ -11,6 +11,8 @@ import {ProviderFactory} from "./harvi/providers/ProviderFactory";
 import {HarviDataInitializer} from "./harvi/HarviDataInitializer";
 import {Room} from "./routes/Room";
 import {House} from "./routes/House";
+import {DeviceType} from "./routes/DeviceType";
+import {Device} from "./routes/Device";
 
 var app = express();
 
@@ -35,10 +37,16 @@ class HttpServer {
         app.get('/', index.index);
 
         let room = new Room();
-
         let house = new House();
+        let deviceType = new DeviceType();
+        let device = new Device();
 
         app.use('/house', house.getRoutes());
+
+        app.use('/device-type', deviceType.getRoutes());
+        app.use('/device', device.getRoutes());
+
+
         app.use('/room', room.getRoutes());
         //app.use('/history', new History());
         app.use('/plugin', plugins);

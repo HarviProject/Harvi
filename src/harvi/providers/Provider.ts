@@ -10,7 +10,7 @@ export abstract class Provider<T> implements IProvider<T> {
     name: string;
     private modelProvider;
 
-    constructor(name: string, schema: any) {
+    constructor(name: string, schema: any, private populate?: string) {
         this.name = name;
         let mSchema = new Schema(schema);
         this.modelProvider = mongoose.model(this.name, mSchema);
@@ -19,7 +19,12 @@ export abstract class Provider<T> implements IProvider<T> {
 
     findAsync(query: any): Promise<Array<T>> {
         return new Promise((resolve, reject) => {
-            this.modelProvider.find(query).exec((err, founds: Array<T>) => {
+            let querying = this.modelProvider.find(query);
+            if (this.populate) {
+                querying = querying.populate(this.populate);
+            }
+
+            querying.exec((err, founds: Array<T>) => {
                 if (err) {
                     Harvi.logger.error(err);
                     reject(err);
@@ -27,6 +32,7 @@ export abstract class Provider<T> implements IProvider<T> {
                     resolve(founds);
                 }
             })
+
         });
     }
 
