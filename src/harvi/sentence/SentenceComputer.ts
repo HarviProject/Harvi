@@ -65,7 +65,7 @@ export class SentenceComputer implements IPluginLoaded {
 
         if (pluginFound) {
             Harvi.logger.debug('Plugin: "' + pluginFound.name + '" called with sentence: "' + sentence + '"');
-            Harvi.logger.debug('Action: ' + action);
+            Harvi.logger.debug('IAction: ' + action);
             Harvi.logger.debug('data: ' + data);
             Harvi.logger.debug('URL : ' + pluginFound.url);
             //make request

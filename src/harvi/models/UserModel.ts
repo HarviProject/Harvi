@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-interface UserSchema {
+export interface UserSchema {
     username: string;
     password: string;
     email: string;
@@ -16,7 +16,7 @@ var userSchema = {
     password: String,
     email: String,
     date: {type: Date, default: Date.now},
-    role: String,
+    role: String
 };
 
 // var Cat = mongoose.model('Cat', {name: String});
@@ -25,6 +25,16 @@ export class UserModel extends Provider<UserSchema> {
 
     constructor() {
         super("User", userSchema);
+    }
+
+    async findByNameAsync(name: string): Promise<UserSchema> {
+        let founds = await this.findAsync({username: name});
+
+        if (founds.length == 0) {
+            return null;
+        } else {
+            return founds[0];
+        }
     }
 
 }

@@ -15,6 +15,8 @@ import {DeviceType} from "./routes/DeviceType";
 import {Device} from "./routes/Device";
 
 var app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 
 class HttpServer {
@@ -53,6 +55,8 @@ class HttpServer {
         app.get('/voice-listener', (req, res) => {
             this.harvi.newSentenceListened(req.query.q);
         });
+
+
     }
 
     onRequest() {
@@ -68,20 +72,27 @@ class HttpServer {
                     Harvi.logger.error(err);
                     reject(err);
                 } else {
-                    Harvi.logger.info("Listening on port " + this.NodePort);
+                    Harvi.logger.debug("Listening on port " + this.NodePort);
                     resolve();
                 }
+            });
+
+
+            io.on('connection', function (socket) {
+                console.log("Yeah connection");
             });
         });
 
     }
 
     async initHarvi() {
-        Harvi.logger.info("Init Default user");
-        await this.harviDateInit.initUserAdminAsync();
+        // Harvi.logger.debug("Init Default user");
+        // await this.harviDateInit.initUserAdminAsync();
 
-        Harvi.logger.info("Start harvi");
+        Harvi.logger.debug("Start harvi");
         this.harvi.init();
+
+        this.harvi.testSchedulerAsync();
     }
 }
 

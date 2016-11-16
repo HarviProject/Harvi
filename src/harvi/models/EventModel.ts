@@ -1,31 +1,26 @@
 import {Provider} from "../providers/Provider";
+import {UserSchema} from "./UserModel";
+import {EventType} from "../core/event-type/EventType";
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-interface UserSchema {
-    username: string;
-    password: string;
-    email: string;
-    role: string;
-    date?: string
+export interface EventSchema {
+    eventType: EventType;
+    user: UserSchema;
 }
 
-var userSchema = {
-    username: String,
-    password: String,
-    email: String,
-    date: {type: Date, default: Date.now},
-    role: String,
+var eventSchema = {
+    eventType: Object,
+    user: Object
 };
 
-// var Cat = mongoose.model('Cat', {name: String});
 
-export class UserModel extends Provider<UserSchema> {
+export class EventModel extends Provider<EventSchema> {
 
     constructor() {
-        super("User", userSchema);
+        super("Event", eventSchema);
     }
 
 }
