@@ -36,82 +36,73 @@ export class SentenceComputer implements IPluginLoaded {
     async computeAsync(sentence: string): Promise<HarviHttpResponseModel> {
 
 
-        //First use WIT
-        let witFound: HarviHttpResponseModel = await this.witPlugins.runAsync(sentence);
+        var pluginFound: PluginModel = null;
+        let data: string = null;
+        let finded: boolean = false;
+        let action: string = null;
+        let score: number = 0;
+        let confidence: number = 0.6;
 
-        if (witFound) {
-            let aviResponse: HarviHttpResponse = new HarviHttpResponse();
-            aviResponse.compute(witFound);
-            return witFound;
-        } else {
-            var pluginFound: PluginModel = null;
-            let data: string = null;
-            let finded: boolean = false;
-            let action: string = null;
-            let score: number = 0;
-            let confidence: number = 0.6;
+        sentence = sentence.trim();
 
-            sentence = sentence.trim();
+        SentenceComputer.plugins.forEach((plugin: PluginModel) => {
 
-            SentenceComputer.plugins.forEach((plugin: PluginModel) => {
+            plugin.sentences.forEach(s => {
+                if (finded) return false;
 
-                plugin.sentences.forEach(s => {
-                    if (finded) return false;
+                var levens = clj_fuzzy.metrics.levenshtein(sentence, s);
+                levens = 1 - (levens / s.length);
+                if ((levens > score && levens > confidence) ||
+                    sentence.trim().indexOf(s.trim()) != -1) {
+                    // if (sentence.trim().indexOf(s.trim()) != -1) {
 
-                    var levens = clj_fuzzy.metrics.levenshtein(sentence, s);
-                    levens = 1 - (levens / s.length);
-                    if ((levens > score && levens > confidence) ||
-                        sentence.trim().indexOf(s.trim()) != -1) {
-                        // if (sentence.trim().indexOf(s.trim()) != -1) {
+                    // if () {
+                    pluginFound = plugin;
 
-                        // if () {
-                        pluginFound = plugin;
-
-                        action = s;
-                        data = sentence.substr(s.length, sentence.length);
-                        //console.log(data);
-                        finded = true;
-                        return true;
-                    }
-                });
+                    action = s;
+                    data = sentence.substr(s.length, sentence.length);
+                    //console.log(data);
+                    finded = true;
+                    return true;
+                }
             });
+        });
 
-            if (pluginFound) {
-                Harvi.logger.debug('Plugin: "' + pluginFound.name + '" called with sentence: "' + sentence + '"');
-                Harvi.logger.debug('IAction: ' + action);
-                Harvi.logger.debug('data: ' + data);
-                Harvi.logger.debug('URL : ' + pluginFound.url);
-                //make request
+        if (pluginFound) {
+            Harvi.logger.debug('Plugin: "' + pluginFound.name + '" called with sentence: "' + sentence + '"');
+            Harvi.logger.debug('IAction: ' + action);
+            Harvi.logger.debug('data: ' + data);
+            Harvi.logger.debug('URL : ' + pluginFound.url);
+            //make request
 
-                let query: string = "?path=plugins/" + pluginFound.folder + "&script=" + pluginFound.script;
+            let query: string = "?path=plugins/" + pluginFound.folder + "&script=" + pluginFound.script;
 
-                query += "&action=" + action;
-                query += "&sentence=" + sentence;
-                query += "&data=" + data;
-                query += "&config=" + JSON.stringify(Config.config);
-
-
-                let sentenceHistory: SentenceHistory = new SentenceHistory();
-                sentenceHistory.addSentence(sentence);
+            query += "&action=" + action;
+            query += "&sentence=" + sentence;
+            query += "&data=" + data;
+            query += "&config=" + JSON.stringify(Config.config);
 
 
-                let url: string = 'http://localhost:8888/plugin' + pluginFound.url + query;
+            let sentenceHistory: SentenceHistory = new SentenceHistory();
+            sentenceHistory.addSentence(sentence);
 
-                Harvi.logger.debug('Request : ' + url);
 
-                request(url, function (error, response, body) {
+            //TODO : Use Request Class
+            let url: string = 'http://localhost:8888/plugin' + pluginFound.url + query;
 
-                    if (!error && response.statusCode == 200) {
+            Harvi.logger.debug('Request : ' + url);
+            let response: HarviHttpResponseModel = await this.requestAsync(url);
 
-                        let aviResponseModel: HarviHttpResponseModel = JSON.parse(body);
+            return response;
 
-                        let aviResponse: HarviHttpResponse = new HarviHttpResponse();
-                        aviResponse.compute(aviResponseModel);
-                        return aviResponseModel;
-                    } else {
-                        Harvi.logger.error(error);
-                    }
-                })
+        } else {
+            //First use WIT
+            let witFound: HarviHttpResponseModel = await this.witPlugins.runAsync(sentence);
+
+            if (witFound) {
+                let aviResponse: HarviHttpResponse = new HarviHttpResponse();
+                aviResponse.compute(witFound);
+                return witFound;
             } else {
                 let aviResponse: HarviHttpResponse = new HarviHttpResponse();
                 let res = {
@@ -122,6 +113,26 @@ export class SentenceComputer implements IPluginLoaded {
                 return res;
             }
         }
+    }
+
+    private requestAsync(url): Promise<HarviHttpResponseModel> {
+        return new Promise((resolve, reject) => {
+            request(url, (error, response, body) => {
+
+                if (!error && response.statusCode == 200) {
+
+                    let aviResponseModel: HarviHttpResponseModel = JSON.parse(body);
+
+                    let aviResponse: HarviHttpResponse = new HarviHttpResponse();
+                    aviResponse.compute(aviResponseModel);
+                    resolve(aviResponseModel);
+                } else {
+                    Harvi.logger.error(error);
+                    reject(error);
+                }
+            })
+        });
+
     }
 
 
