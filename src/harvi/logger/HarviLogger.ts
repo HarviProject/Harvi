@@ -39,17 +39,17 @@ logger.add(winston.transports.Console, {
     timestamp: false
 });
 
-logger.add(winston.transports.File, {
-    prettyPrint: false,
-    level: 'info',
-    silent: false,
-    colorize: true,
-    timestamp: true,
-    filename: './harvi.log',
-    maxsize: 40000,
-    maxFiles: 10,
-    json: false
-});
+// logger.add(winston.transports.File, {
+//     prettyPrint: false,
+//     level: 'info',
+//     silent: false,
+//     colorize: true,
+//     timestamp: true,
+//     filename: './harvi.log',
+//     maxsize: 40000,
+//     maxFiles: 10,
+//     json: false
+// });
 
 var myCustomLevels = {
     colors: {
