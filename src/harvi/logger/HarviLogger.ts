@@ -32,7 +32,7 @@ var logger = new (winston.Logger)({
 });
 
 logger.add(winston.transports.Console, {
-    level: 'debug',
+    // level: 'debug',
     prettyPrint: true,
     colorize: true,
     silent: false,
