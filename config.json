@@ -1,6 +1,6 @@
 {
   "plugin": {
-    "folder": "plugins"
+    "folder": "dist/plugins"
   },
   "sentence": {
     "fileHistory": "sentence-history.json"

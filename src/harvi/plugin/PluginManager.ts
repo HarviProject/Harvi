@@ -10,30 +10,31 @@ import {Config} from "../config/Config";
 import {Harvi} from "../Harvi";
 
 export class PluginManager {
-    private listener:IPluginLoaded;
-    private config:ConfigModel;
+    private listener: IPluginLoaded;
+    private config: ConfigModel;
 
 
     constructor() {
         this.config = Config.config;
     }
 
-    setOnPluginLoadedListener(listener:IPluginLoaded) {
+    setOnPluginLoadedListener(listener: IPluginLoaded) {
         this.listener = listener;
     }
 
-    readPluginFolder():void {
+    readPluginFolder(): void {
 
-        let plugins:Array<PluginModel> = new Array<PluginModel>();
+        let plugins: Array<PluginModel> = new Array<PluginModel>();
 
-        fs.readdir(this.config.plugin.folder, (err, files)=> {
+        fs.readdir(this.config.plugin.folder, (err, files) => {
             if (err) {
-                Harvi.logger.error("Erreur dans le chargement des plugins : "+ err);
+                Harvi.logger.error("Erreur dans le chargement des plugins : " + err);
             } else {
                 files.forEach((file) => {
-                    let content:string = fs.readFileSync(path.join(this.config.plugin.folder, file, 'config.json'), {encoding: 'utf8'});
+                    let content: string = fs.readFileSync(path.join(this.config.plugin.folder, file, 'config.json'), {encoding: 'utf8'});
+                    Harvi.logger.info("Inject plugin :" + file);
 
-                    let plugin:PluginModel = JSON.parse(content);
+                    let plugin: PluginModel = JSON.parse(content);
 
                     plugins.push(plugin);
                 });
