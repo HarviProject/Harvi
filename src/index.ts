@@ -52,8 +52,8 @@ class HttpServer {
         app.use('/room', room.getRoutes());
         //app.use('/history', new History());
         app.use('/plugin', plugins);
-        app.get('/voice-listener', (req, res) => {
-            this.harvi.newSentenceListened(req.query.q);
+        app.get('/voice-listener', async(req, res) => {
+            res.json(await this.harvi.newSentenceListenedAsync(req.query.q));
         });
 
 

@@ -15,7 +15,7 @@ export class Index extends CorePlugins implements ICorePlugin {
 
             let response = {
                 type: "tts",
-                value: "Je ne suis pas encore paramétré pour effectuer cette action"
+                content: "Je ne suis pas encore paramétré pour effectuer cette action"
             };
 
 

@@ -1,12 +1,22 @@
 {
-  "name": "server-avi",
-  "version": "1.0.0",
-  "description": "",
+  "name": "harvi",
+  "version": "0.0.1",
+  "description": "Your home assistant robotic very intelligent",
+  "keywords": [
+    "home",
+    "assistant",
+    "robot",
+    "domotique",
+    "automation",
+    "jarvis",
+    "artificial",
+    "intelligence"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Johan pujol",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.14.1",

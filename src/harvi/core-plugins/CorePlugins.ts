@@ -17,6 +17,7 @@ const accessToken = (() => {
 export class CorePlugins {
 
     clientWit = null;
+    actionCalled:boolean;
 
     mActions = {
         send(request, response){
@@ -45,12 +46,14 @@ export class CorePlugins {
                         let req = require(file);
                         let currentCorePlugin: ICorePlugin = new req.Index();
                         this.mActions[currentCorePlugin.actionName] = ({context, entities}) => {
-                            return new Promise(function (resolve, reject) {
+                            return new Promise((resolve, reject) => {
                                 try {
+                                    Harvi.logger.debug("Launch WIT actions: " + JSON.stringify(currentCorePlugin));
                                     currentCorePlugin.action({
                                         context,
                                         entities
                                     }, null).then((harviWitResponse: HarviWitResponse) => {
+                                        Harvi.logger.debug("Response WIT actions: " + JSON.stringify(harviWitResponse));
                                         resolve(harviWitResponse.harvi);
                                     });
                                 } catch (e) {
@@ -69,12 +72,22 @@ export class CorePlugins {
 
     }
 
-    run(sentence: string) {
-        console.log('Launch action with sentence : ' + sentence);
-        this.clientWit.runActions(uuid.v1(), sentence, {}, 5).then((ctx: HarviHttpResponseModel) => {
-            // HarviHttpResponse.compute(ctx)
-            console.log(ctx);
-        })
+    runAsync(sentence: string): Promise<HarviHttpResponseModel> {
+        return new Promise((resolve, reject) => {
+            this.actionCalled = false;
+            console.log('Launch action with sentence : ' + sentence);
+            this.clientWit.runActions(uuid.v1(), sentence, {}, 1).then((ctx: HarviHttpResponseModel) => {
+                // HarviHttpResponse.computeAsync(ctx)
+                // console.log(ctx);
+                if (ctx) {
+                    resolve(ctx);
+                } else {
+                    resolve(null);
+                }
+
+            })
+        });
+
 
     }
 

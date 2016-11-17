@@ -14,7 +14,7 @@ export class Index extends CorePlugins implements ICorePlugin {
 
             let response = {
                 type: "tts",
-                value: ""
+                content: "Il fait beau"
             };
 
             resolve({

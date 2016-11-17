@@ -10,11 +10,12 @@ export class Index extends CorePlugins implements ICorePlugin {
     action(wit: Wit, harvi: any): Promise<HarviWitResponse> {
         return new Promise((resolve, reject) => {
 
+            console.log(wit.entities);
             let date = new Date();
 
             let response = {
                 type: "tts",
-                value: "Il est " + date.getHours() + " heures " + date.getMinutes()
+                content: "Il est " + date.getHours() + " heures " + date.getMinutes()
             };
 
             resolve({

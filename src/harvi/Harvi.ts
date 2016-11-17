@@ -10,6 +10,8 @@ import {Scheduler} from "./core/scheduler/Scheduler";
 import {SchedulerOption} from "./core/scheduler/SchedulerOption";
 import {UserModel, UserSchema} from "./models/UserModel";
 import {EventWatcher} from "./core/event-watcher/EventWatcher";
+import {CorePlugins} from "./core-plugins/CorePlugins";
+import {HarviHttpResponseModel} from "./HarviHttpResponseModel";
 
 
 export class Harvi {
@@ -19,6 +21,7 @@ export class Harvi {
     static logger: HarviLogger = new HarviLogger();
     static event = new HarviEventEmitter();
     private static mCurrentUser: UserSchema;
+    private corePlugin: CorePlugins = new CorePlugins();
     // static socket;
 
     constructor() {
@@ -35,10 +38,13 @@ export class Harvi {
         }
 
 
+        this.corePlugin.init();
+
+
         this.initEventWatcher();
 
 
-        this.sentenceComputer.init();
+        this.sentenceComputer.init(this.corePlugin);
 
         this.sentenceHistory.loadSentences();
 
@@ -51,18 +57,21 @@ export class Harvi {
         event.init();
     }
 
-    newSentenceListened(text) {
-        this.sentenceComputer.compute(text);
+    async newSentenceListenedAsync(text): Promise<HarviHttpResponseModel> {
+        return await this.sentenceComputer.computeAsync(text);
     }
 
     async testSchedulerAsync() {
         let shcdu = new Scheduler();
         let optiosn = new SchedulerOption();
 
-        // var schedule = require('node-schedule');
-        // var rule = new schedule.RecurrenceRule();
-        // rule.second = 20;
-        optiosn.rule = "*/1 * * * *";
+        var schedule = require('node-schedule');
+        var rule = new schedule.RecurrenceRule();
+        rule.dayOfWeek = [new schedule.Range(1, 5)];//monday -> friday
+        rule.hour = 8;
+        rule.minute = 0;
+
+        // optiosn.rule = "*/1 * * * *";
         optiosn.eventType = {
             name: "reminder",
             action: {
@@ -80,7 +89,7 @@ export class Harvi {
         };
 
         let userModel = new UserModel();
-      //  let user = await userModel.findByNameAsync("admin");
+        //  let user = await userModel.findByNameAsync("admin");
         shcdu.createAsync(optiosn);
 
     }

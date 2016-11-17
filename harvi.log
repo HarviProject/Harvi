@@ -273,3 +273,226 @@
 2016-11-16T20:18:04.279Z - [34mdebug[39m: Start harvi
 2016-11-16T20:18:04.281Z - [34mdebug[39m: Config loaded undefined
 2016-11-16T20:18:04.282Z - [34mdebug[39m: 
+2016-11-17T08:21:20.258Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:21:59.797Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:21:59.800Z - [34mdebug[39m: Start harvi
+2016-11-17T08:21:59.803Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T08:21:59.805Z - [34mdebug[39m: 
+2016-11-17T08:22:30.523Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:22:30.525Z - [34mdebug[39m: Compute response. Content : Désolé, mais je n'ai pas compris
+2016-11-17T08:26:04.622Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:26:04.626Z - [34mdebug[39m: Start harvi
+2016-11-17T08:26:04.627Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T08:26:04.633Z - [34mdebug[39m: 
+2016-11-17T08:26:43.960Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:26:43.965Z - [34mdebug[39m: Start harvi
+2016-11-17T08:26:43.966Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T08:26:43.970Z - [34mdebug[39m: 
+2016-11-17T08:28:04.962Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:28:04.966Z - [34mdebug[39m: Compute response. Content : Désolé, mais je n'ai pas compris
+2016-11-17T08:28:43.224Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:28:43.224Z - [34mdebug[39m: Compute response. Content : Désolé, mais je n'ai pas compris
+2016-11-17T08:29:43.742Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:29:43.746Z - [34mdebug[39m: Start harvi
+2016-11-17T08:29:43.748Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T08:29:43.750Z - [34mdebug[39m: 
+2016-11-17T08:32:15.512Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T08:32:15.515Z - [34mdebug[39m: Start harvi
+2016-11-17T08:32:15.516Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T08:32:15.518Z - [34mdebug[39m: 
+2016-11-17T08:37:08.788Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:08.792Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 37
+2016-11-17T08:37:14.108Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:14.109Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 37
+2016-11-17T08:37:18.618Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:18.619Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 37
+2016-11-17T08:37:38.685Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:38.685Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T08:37:46.672Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:46.672Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 37
+2016-11-17T08:37:53.344Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:37:53.344Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 37
+2016-11-17T08:38:02.032Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:38:02.032Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 38
+2016-11-17T08:38:06.741Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:38:06.741Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 38
+2016-11-17T08:38:11.043Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:38:11.044Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T08:38:15.343Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:38:15.343Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 38
+2016-11-17T08:44:45.282Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:44:45.282Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 44
+2016-11-17T08:44:49.996Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:44:49.996Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 44
+2016-11-17T08:45:40.320Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:45:40.321Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T08:45:46.314Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:45:46.314Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T08:46:01.673Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T08:46:01.674Z - [34mdebug[39m: Compute response. Content : Il est 9 heures 46
+2016-11-17T09:14:56.710Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:14:56.710Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:15:16.278Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:15:16.278Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:15:27.617Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:15:27.617Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:15:59.180Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:15:59.181Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:30:44.146Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:30:44.146Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:31:12.203Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:31:12.203Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:31:45.989Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:31:45.990Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:33:20.593Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:33:20.594Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:33:29.420Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:33:29.420Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:33:49.876Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:33:49.877Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:34:26.773Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:34:26.773Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T09:34:48.062Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T09:34:48.062Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T10:03:30.234Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T10:03:30.234Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T10:04:08.089Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T10:04:08.089Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T11:14:16.243Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:14:16.243Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 14
+2016-11-17T11:14:37.333Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:14:37.333Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 14
+2016-11-17T11:25:44.096Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:25:44.096Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 25
+2016-11-17T11:27:22.467Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:27:22.467Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 27
+2016-11-17T11:28:29.595Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:28:29.598Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 28
+2016-11-17T11:28:35.881Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:28:35.882Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 27
+2016-11-17T11:28:41.596Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:28:41.597Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 28
+2016-11-17T11:28:49.508Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T11:28:49.508Z - [34mdebug[39m: Compute response. Content : Il est 12 heures 28
+2016-11-17T12:44:05.040Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T12:44:05.043Z - [34mdebug[39m: Start harvi
+2016-11-17T12:44:05.049Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T12:44:05.054Z - [34mdebug[39m: 
+2016-11-17T12:44:49.469Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:44:49.471Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T12:45:34.855Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T12:45:34.858Z - [34mdebug[39m: Start harvi
+2016-11-17T12:45:34.859Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T12:45:34.861Z - [34mdebug[39m: 
+2016-11-17T12:48:11.317Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:48:11.318Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 48
+2016-11-17T12:49:21.564Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:49:21.564Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 49
+2016-11-17T12:49:31.209Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:49:31.209Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T12:49:35.867Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:49:35.868Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T12:49:43.050Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:49:43.050Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T12:49:52.046Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:49:52.047Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 49
+2016-11-17T12:51:15.701Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T12:51:15.705Z - [34mdebug[39m: Start harvi
+2016-11-17T12:51:15.751Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T12:51:15.754Z - [34mdebug[39m: 
+2016-11-17T12:52:55.766Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:52:55.768Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 52
+2016-11-17T12:56:17.073Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T12:56:17.084Z - [34mdebug[39m: Start harvi
+2016-11-17T12:56:17.147Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T12:56:17.163Z - [34mdebug[39m: 
+2016-11-17T12:57:34.111Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:57:34.114Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 57
+2016-11-17T12:58:12.878Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:58:12.880Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 57
+2016-11-17T12:58:37.841Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T12:58:37.844Z - [34mdebug[39m: Start harvi
+2016-11-17T12:58:37.857Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T12:58:37.874Z - [34mdebug[39m: 
+2016-11-17T12:58:52.953Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:58:52.954Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 58
+2016-11-17T12:59:10.077Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:59:10.078Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 59
+2016-11-17T12:59:29.816Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T12:59:29.816Z - [34mdebug[39m: Compute response. Content : Il est 13 heures 59
+2016-11-17T13:01:56.939Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T13:01:56.961Z - [34mdebug[39m: Start harvi
+2016-11-17T13:01:56.974Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T13:01:56.996Z - [34mdebug[39m: 
+2016-11-17T13:02:02.009Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:02:02.014Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:02:02.765Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:02:02.767Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 2"}}
+2016-11-17T13:02:03.480Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:02:03.480Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 2
+2016-11-17T13:03:37.182Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T13:03:37.185Z - [34mdebug[39m: Start harvi
+2016-11-17T13:03:37.191Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T13:03:37.197Z - [34mdebug[39m: 
+2016-11-17T13:03:57.721Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:03:57.723Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:03:58.339Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:03:58.342Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 3"}}
+2016-11-17T13:03:59.129Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:03:59.129Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 3
+2016-11-17T13:05:25.214Z - [34mdebug[39m: Listening on port 8888
+2016-11-17T13:05:25.220Z - [34mdebug[39m: Start harvi
+2016-11-17T13:05:25.221Z - [34mdebug[39m: Config loaded undefined
+2016-11-17T13:05:25.226Z - [34mdebug[39m: 
+2016-11-17T13:05:33.427Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:05:33.428Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:05:34.161Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:05:34.166Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 5"}}
+2016-11-17T13:05:34.976Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:05:34.977Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 5
+2016-11-17T13:15:59.210Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:15:59.210Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:16:00.026Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:16:00.027Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 16"}}
+2016-11-17T13:16:00.846Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:16:00.846Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 16
+2016-11-17T13:35:10.595Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:35:10.596Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:35:11.231Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:35:11.232Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 35"}}
+2016-11-17T13:35:11.826Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:35:11.827Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 35
+2016-11-17T13:50:33.306Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getForecast"}
+2016-11-17T13:50:33.307Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}]}},"harvi":{"type":"tts","content":"Il fait beau"}}
+2016-11-17T13:50:33.746Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"getTimeNow"}
+2016-11-17T13:50:33.747Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{"type":"tts","content":"Il fait beau"}},"harvi":{"type":"tts","content":"Il est 14 heures 50"}}
+2016-11-17T13:50:34.164Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T13:50:34.164Z - [34mdebug[39m: Compute response. Content : Il est 14 heures 50
+2016-11-17T14:09:25.154Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:09:25.155Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9954188497684507,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9969862305588787,"value":"météo"}],"on_off":[{"confidence":0.7971164903045214,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:09:25.970Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:09:25.970Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:09:29.860Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:09:29.861Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9904542842206998,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:09:30.305Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:09:30.305Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:09:40.101Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:09:40.101Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9904542842206998,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:09:40.872Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:09:40.872Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:10:13.257Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:10:13.257Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9908567653460882,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:10:13.690Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:10:13.690Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:10:41.333Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:10:41.334Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9936963169628662,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:10:41.778Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:10:41.778Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:11:05.682Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:11:05.682Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9936963169628662,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:11:06.126Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:11:06.126Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
+2016-11-17T14:19:57.980Z - [34mdebug[39m: Launch WIT actions: {"clientWit":null,"mActions":{},"actionName":"turnOnLight"}
+2016-11-17T14:19:57.980Z - [34mdebug[39m: Response WIT actions: {"wit":{"context":{},"entities":{"location":[{"confidence":0.9960337868008088,"type":"value","value":"toulouse","suggested":true}],"weather":[{"confidence":0.9936963169628662,"value":"météo"}],"on_off":[{"confidence":0.9950160823024133,"value":"on"}]}},"harvi":{"type":"tts","content":"Je ne suis pas encore paramétré pour effectuer cette action"}}
+2016-11-17T14:19:58.798Z - [34mdebug[39m: Compute response. Type : tts
+2016-11-17T14:19:58.798Z - [34mdebug[39m: Compute response. Content : Je ne suis pas encore paramétré pour effectuer cette action
