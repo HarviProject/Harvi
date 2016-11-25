@@ -1,0 +1,17 @@
+{
+  "name": "Temperature",
+  "version": "1.0.0",
+  "author": "Michel",
+  "description": "",
+  "events": [
+    {
+      "name": "temperature_change",
+      "description": "Trigger when the temperature as changed"
+    }
+  ],
+  "inputs": [
+    {
+      "":""
+    }
+  ]
+}

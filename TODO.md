@@ -1,5 +1,6 @@
 # TODO LIST HARVI
 
+- Try watch uptime (on raspberry) : watch -n 60 uptime
 - Add event scheduler ('node-schedule')
 - Add eventType watch (ex: temperature > 20°C => action) 
 - Combinaison eventType
@@ -41,3 +42,4 @@
 - https://www.npmjs.com/package/johnny-five
 - https://humanoides.fr/asus-devoile-zenbo-le-robot-assistant-domestique-pour-toute-la-famille/
 - http://www.bluefrogrobotics.com/fr/buddy-fr/
+- http://soundjax.com/

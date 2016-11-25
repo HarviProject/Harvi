@@ -13,6 +13,7 @@ import {Room} from "./routes/Room";
 import {House} from "./routes/House";
 import {DeviceType} from "./routes/DeviceType";
 import {Device} from "./routes/Device";
+import {EventWatcher} from "./harvi/core/event-watcher/EventWatcher";
 
 var app = express();
 const server = require('http').Server(app);
@@ -110,3 +111,6 @@ class Startup {
 
 let startup = new Startup();
 startup.start();
+
+// let test = new EventWatcher();
+// test.watchInterval();

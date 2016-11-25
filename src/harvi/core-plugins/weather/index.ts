@@ -10,7 +10,10 @@ export class Index extends CorePlugins implements ICorePlugin {
     action(wit: Wit, harvi: any): Promise<HarviWitResponse> {
         return new Promise((resolve, reject) => {
             let location = this.firstEntityValue(wit.entities, "location");
+            let weather = this.firstEntityValue(wit.entities, "weather");
 
+            console.log("location", location);
+            console.log("weather", weather);
 
             let response = {
                 type: "tts",

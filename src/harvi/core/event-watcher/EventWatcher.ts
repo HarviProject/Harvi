@@ -11,10 +11,70 @@ export class EventWatcher {
     watchInterval(rule?: any) {
 
         if (!rule) {
-            rule = "*/1 * * * *";
+            rule = "* * * * *";
         }
-        schedule.scheduleJob(rule, function (data: EventSchema) {
-            Harvi.event.emit(data.eventType.name, data);
+
+        let arr = [
+            {
+                id: 0,
+                type: "time",
+                trigger: {
+                    value: '17:20',
+                },
+                triggered: {
+                    type: "light",
+                    value: {
+                        pin: 9
+                    }
+                },
+                notified: false
+            },
+            {
+                id: 2,
+                type: 'time_recursive',
+                trigger: {
+                    value: '17:00',
+                    days: [0, 1]
+
+                },
+                triggered: {},
+                notified: false
+            }, {
+                id: 1,
+                type: "temperature",
+                trigger: {
+                    min: 17,
+                    max: 20,
+                    pin: 9
+                },
+                notified: false
+            }
+        ];
+
+// schedule.scheduleJob(rule, function (data: EventSchema) {
+//     console.log('Event');
+// Harvi.event.emit(data.eventType.name, data);
+// });
+
+        // setInterval(() => {
+        //     console.log('Event');
+        // }, 1000);
+
+
+        //Launch all plugin
+
+
+        //TO listening
+        arr.forEach((event) => {
+            if (event.type == "time_recursive") {
+                Harvi.event.on('time_recursive', (data) => {
+                    //TODO : compute in function of data type
+
+                    // if (data.value > event.trigger.value) {
+                    //
+                    // }
+                });
+            }
         });
     }
 
