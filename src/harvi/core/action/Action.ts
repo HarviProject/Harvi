@@ -1,4 +1,5 @@
 import {IActionType} from "../action-type/ActionType";
+import {HarviHttpResponseModel} from "../../HarviHttpResponseModel";
 export interface IAction {
     name: string;
     actionType: IActionType;
@@ -6,10 +7,8 @@ export interface IAction {
     subAction?: IAction;
 }
 
-export interface IConfigAction {
+export interface IConfigAction extends HarviHttpResponseModel {
     //TODO : implement this
-    type: string;
-    content?: string;
     condition?: IConditionAction;
     sentence?: string;
 }

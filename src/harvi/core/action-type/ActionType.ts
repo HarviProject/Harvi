@@ -9,6 +9,9 @@ export class ActionType {
             {
                 name: "reminder",
                 listening: "reminder"
+            }, {
+                name: "alarm-clock",
+                listening: "alarm-clock"
             },
             {
                 name: "temperature",
@@ -19,5 +22,12 @@ export class ActionType {
                 listening: "tts"
             }
         ];
+    }
+
+    static getAlarmClock() {
+        return {
+            name: "alarm-clock",
+            listening: "alarm-clock"
+        }
     }
 }

@@ -9,7 +9,7 @@ const schedule = require('node-schedule');
 export class Scheduler {
     private schedulers = [];
 
-    async createAsync(options: SchedulerOption, user?: UserSchema) {
+    async createAsync(options: SchedulerOption, user?: UserSchema): Promise<any> {
         return new Promise(async(resolve, reject) => {
             if (!options || !options.eventType || !options.rule) {
                 return reject(new Error('Wrong parameters, need eventType and rule'));
@@ -31,14 +31,7 @@ export class Scheduler {
                 Harvi.event.emit(data.eventType.name, data);
             }.bind(null, eventCreated));
 
-            // let scheduleModel = new SchedulerModel();
-            // scheduleModel.createAsync({
-            //     endDate: options.rule,
-            //     _eventType: '',
-            //     status: 'IN_PROGRESS'
-            // });
-
-            return resolve();
+            return resolve(eventCreated);
         });
     }
 

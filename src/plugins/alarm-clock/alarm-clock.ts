@@ -1,13 +1,11 @@
-import {IPlugin} from "../../harvi/plugin/IPlugin";
+import {IPlugin, IDataPlugin} from "../../harvi/plugin/IPlugin";
 import {HarviHttpResponseModel} from "../../harvi/HarviHttpResponseModel";
-/**
- * Created by johan on 18/11/2015.
- */
-
-var schedule = require('node-schedule');
+import {Scheduler} from "../../harvi/core/scheduler/Scheduler";
+import {SchedulerOption} from "../../harvi/core/scheduler/SchedulerOption";
+import {ActionType} from "../../harvi/core/action-type/ActionType";
 
 export class Index implements IPlugin {
-    action(data: any, callback: { (response: HarviHttpResponseModel)}, config?: any) {
+    action(data: IDataPlugin, callback: { (response: HarviHttpResponseModel)}, config?: any) {
         var time = data.data.trim();
 
 
@@ -41,20 +39,27 @@ export class Index implements IPlugin {
         var date = new Date(year, month, day, hour, minute, second);
 
 
-        var j = schedule.scheduleJob(date, function () {
-            console.log('Alarm clock called at :' + new Date());
-            callback({
-                type: "song",
-                content: "alarm.mp3"
-            });
+        let schedule = new Scheduler();
+        let options = new SchedulerOption();
 
+        options.rule = date;
+        options.eventType = {
+            name: "alarm-clock",
+            action: {
+                actionType: ActionType.getAlarmClock(),
+                name: "alarm-clock",
+                config: {
+                    type: 'song',
+                    content: 'clock-tick.mp3'
+                }
+            }
+        };
+        schedule.createAsync(options);
+
+        callback({
+            type: "tts",
+            content: "C'est fait"
         });
-
     }
 
 }
-
-exports.action = function (data, callback, config) {
-
-
-};

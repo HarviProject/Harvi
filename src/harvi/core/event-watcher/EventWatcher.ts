@@ -1,5 +1,7 @@
 import {Harvi} from "../../Harvi";
 import {EventSchema} from "../../models/EventModel";
+import {ActionType} from "../action-type/ActionType";
+import {HarviHttpResponse} from "../../HarviHttpResponse";
 const schedule = require('node-schedule');
 export class EventWatcher {
 
@@ -84,6 +86,11 @@ export class EventWatcher {
             if (data.eventType.action.config.type == "tts") {
                 Harvi.speak(data.eventType.action.config.sentence);
             }
+        });
+
+        Harvi.event.on(ActionType.getAlarmClock().name, (data: EventSchema) => {
+            let aviResponse: HarviHttpResponse = new HarviHttpResponse();
+            aviResponse.compute(data.eventType.action.config);
         });
 
         Harvi.event.on('temperature', (data: EventSchema) => {

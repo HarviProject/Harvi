@@ -61,38 +61,6 @@ export class Harvi {
         return await this.sentenceComputer.computeAsync(text);
     }
 
-    async testSchedulerAsync() {
-        let shcdu = new Scheduler();
-        let optiosn = new SchedulerOption();
-
-        var schedule = require('node-schedule');
-        var rule = new schedule.RecurrenceRule();
-        rule.dayOfWeek = [new schedule.Range(1, 5)];//monday -> friday
-        rule.hour = 8;
-        rule.minute = 0;
-
-        // optiosn.rule = "*/1 * * * *";
-        optiosn.eventType = {
-            name: "reminder",
-            action: {
-                name: "reminder wakeup",
-                actionType: {
-                    name: "reminder",
-                    listening: "reminder"
-                },
-                config: {
-                    type: "tts",
-                    sentence: "Il est l'heure de se réveiller"
-                }
-
-            }
-        };
-
-        let userModel = new UserModel();
-        //  let user = await userModel.findByNameAsync("admin");
-        shcdu.createAsync(optiosn);
-
-    }
 
     async getCurrentUserAsync() {
         //FIXME: for now return firstUser
