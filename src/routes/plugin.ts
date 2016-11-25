@@ -24,6 +24,8 @@ router.get('/:name', function (req, res) {
         return;
     }
 
+    plugin = new plugin.Index();
+
     plugin.action(data, function (response) {
         //console.log(response);
 
